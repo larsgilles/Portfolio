@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+html, body{
+    margin: 0;
+    padding: 0;
+    }
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: steelblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: static;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #6a0c0b;
+
+}
+
+main {
+    position: static;
+    top: 100px;
+    margin-left: 64px;
+
+}
+
+footer {
+    position: static;
+
+}
+
+h1 {
+    margin-left: 50px;
+}
+h1, h2 {
+    font-family: 'Black Ops One', cursive;
+    color: #fbca03;
+}
+/* ---------------------------------------------- */
+/* Style the navigation menu */
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #6a0c0b;
+}
+
+.topnav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #fbca03;
+    color: #6a0c0b;
+}
+
+.topnav a.active {
+    background-color: steelblue;
+    color: #fbca03;
+}
+
+.topnav .hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.hamburger {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .hamburger {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* ---------------------------------------------- */
+/* Style the navigation menu */
+
+    /*.mobile-container {
+
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #6a0c0b;
+        text-align: start;
+        position: relative;
+        !*margin-left: 50px;*!
+    }
+
+    !* Hide the links inside the navigation menu (except for logo/home) *!
+    .topnav #myLinks {
+        display: none;
+        margin-left: 50px;
+    }
+
+    !* Style navigation menu links *!
+    .topnav a {
+        color: #fbca03;
+        padding: 14px 16px;
+        text-decoration: none;
+        text-align: start;
+        font-size: 17px;
+        display: block;
+    }
+
+    !* Style the hamburger menu *!
+    .topnav a.hamburger {
+        background: #6a0c0b;
+        font-size: 2rem;
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    !* Add a grey background color on mouse-over *!
+    .topnav a:hover {
+        background-color: #6a0c0b;
+        color: steelblue;
+    }
+
+    !* Style the active link (or home/logo) *!
+    .active {
+        background-color: #6a0c0b;
+        color: #fbca03;
+    }*/
+
+
+
+
+
+            /* Toggle between showing and hiding the navigation menu links when the us
+            /* ---------------------------------------------- */
+
+section[id="about"], section[id="portfolio"], section[id="contacts"] {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*-------------------------*/
+
+
+ body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.window {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.window-content {
+    background-color: #6a0c0b;
+    color: #fbca03;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid steelblue;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

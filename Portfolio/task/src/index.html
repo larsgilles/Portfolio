@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="main.css" rel="stylesheet">
+    <title>Hello, World!</title>
+</head>
+<body>
+<header>
+    <nav>
+        <!--&lt;!&ndash; Simulate a smartphone / tablet &ndash;&gt;
+        <div class="mobile-container">
+            &lt;!&ndash; Top Navigation Menu &ndash;&gt;
+            <div class="topnav">
+                <a href="#home" class="active"><h1>IRON MAN</h1></a>
+                &lt;!&ndash; Navigation links (hidden by default) &ndash;&gt;
+                <div id="myLinks">'
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contacts">Contacts</a>
+                </div>
+                &lt;!&ndash; "Hamburger menu" / "Bar icon" to toggle the navigation links &ndash;&gt;
+                <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            &lt;!&ndash; End smartphone / tablet look &ndash;&gt;
+        </div>-->
+        <h1>IRON MAN</h1>
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+    </nav>
+</header>
+
+<main>
+    <section id="about">
+        <h2>About me</h2>
+        <div>
+            <img src="tony.jpg" alt="Tony Stark">
+        </div>
+        <article>
+            <p>
+                Anthony Edward "Tony" Stark was a billionaire industrialist, a founding member of the Avengers, and the
+                former CEO of Stark Industries. <br>
+                A brash but brilliant inventor, Stark was self-described as a genius, billionaire, playboy, and
+                philanthropist.
+            </p>
+            <button type="button" class="open-window" id="about-btn">learn more</button>
+        </article>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <img src="mark.jpg" alt="Arc reactor" width="25%">
+        <article>
+            <p>
+                Anthony Edward "Tony" Stark was a billionaire industrialist, a founding member of the Avengers, and the
+                former CEO of Stark Industries. <br>
+                A brash but brilliant inventor, Stark was self-described as a genius, billionaire, playboy, and
+                philanthropist.
+            </p>
+            <button type="button" class="open-window" id="portfolio-btn">learn more</button>
+
+            <div id="popUp" class="window">
+
+                <div class="window-content">
+                    <span class="close">&times;</span>
+                    <p>A wealthy American business magnate, playboy, philanthropist, inventor and ingenious scientist,
+                        Anthony Edward "Tony" Stark suffers a severe chest injury during a kidnapping. <br>
+                        When his captors attempt to force him to build a weapon of mass destruction, he instead creates
+                        a mechanized suit of armor to save his life and escape captivity. <br>
+                        Later, Stark develops his suit, adding weapons and other technological devices he designed
+                        through his company, Stark Industries. <br>
+                        He uses the suit and successive versions to protect the world as Iron Man. Although at first
+                        concealing his true identity, Stark eventually publicly reveals himself to be Iron Man.<br>
+                        <br>
+                        Initially, Iron Man was a vehicle for Stan Lee to explore Cold War themes, particularly the role
+                        of American technology and industry in the fight against communism. <br>
+                        Subsequent re-imaginings of Iron Man have transitioned from Cold War motifs to contemporary
+                        matters of the time.[1]</p>
+                </div>
+
+            </div>
+        </article>
+    </section>
+
+    <section id="contacts">
+        <h2>contact</h2>
+        <p>phone: 123 456 789 00</p>
+    </section>
+
+</main>
+
+<footer>
+    <div>Copyright by Tony Stark</div>
+</footer>
+
+<script>
+    // Get the modal
+    const popUpWindow = document.getElementById("popUp");
+
+    // Get the button that opens the modal
+    const btn = document.getElementById("portfolio-btn");
+
+    // Get the <span> element that closes the modal
+    const span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+        popUpWindow.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        popUpWindow.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    popUpWindow.onclick = function (event) {
+        if (event.target == popUpWindow) {
+            popUpWindow.style.display = "none";
+        }
+    }
+
+    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+</script>
+
+</body>
+</html>
